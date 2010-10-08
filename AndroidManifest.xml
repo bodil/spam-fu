@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="tv.bodil.spamlol"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".SpamlolActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+    <service android:name="tv.bodil.spamlol.SpamlolService"></service>
+
+    <receiver android:name="tv.bodil.spamlol.CallReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.PHONE_STATE"/>
+        </intent-filter>
+    </receiver>
+</application>
+    <uses-sdk android:minSdkVersion="7" />
+
+
+
+</manifest> 

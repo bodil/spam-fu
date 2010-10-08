@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spamlol</string>
+    <string name="user_agent">Spamlol/1.0</string>
+    <string name="hello">ohai noob</string>
+    <string name="refresh">Load blacklist from server</string>
+    <string name="refresh_title">Loading blacklist...</string>
+    <string name="refresh_io_error">Failed to load the blacklist.</string>
+    <string name="status_text">Blacklist contains %d entries.</string>
+    <string name="status_text_empty">No blacklist loaded. Click the load button!</string>
+    <string name="spam_warning">Spam warning:\n%s</string>
+</resources>
