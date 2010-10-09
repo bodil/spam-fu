@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Spamlol</string>
-    <string name="user_agent">Spamlol/1.0</string>
-    <string name="hello">ohai noob</string>
+    <string name="app_name">Spam-FU</string>
     <string name="refresh">Load blacklist from server</string>
     <string name="refresh_title">Loading blacklist...</string>
     <string name="refresh_io_error">Failed to load the blacklist.</string>

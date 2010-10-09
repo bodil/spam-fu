@@ -1,4 +1,4 @@
-package tv.bodil.spamlol;
+package tv.bodil.spamfu;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SpamlolService extends Service {
+public class SpamfuService extends Service {
 	
 	public static final String VERIFY_CALL = "verify_call";
 	public static final String END_CALL = "end_call";
@@ -27,12 +27,12 @@ public class SpamlolService extends Service {
 	
 	@Override
 	public void onCreate() {
-		Log.d("Spamlol", "Service.onCreate");
+		Log.d("Spam-FU", "Service.onCreate");
 	}
 	
 	@Override
 	public void onDestroy() {
-		Log.d("Spamlol", "Service.onDestroy");
+		Log.d("Spam-FU", "Service.onDestroy");
 	}
 	
 	@Override
@@ -52,7 +52,7 @@ public class SpamlolService extends Service {
 					null, null, null);
 			if (cur.moveToFirst()) {
 				String company = cur.getString(0);
-				Log.d("Spamlol", "Service.onStartcommand: query returned company \"" + company + "\"");
+				Log.d("Spam-FU", "Service.onStartcommand: query returned company \"" + company + "\"");
 				clearToast();
 				
 				LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -66,7 +66,7 @@ public class SpamlolService extends Service {
 				toast.setDuration(Toast.LENGTH_LONG);
 				keepAlive(context);
 			} else {
-				Log.d("Spamlol", "Service.onStartCommand: query returned no results");
+				Log.d("Spam-FU", "Service.onStartCommand: query returned no results");
 			}
 		} else if (action.equals(END_CALL)) {
 			clearToast();
@@ -88,7 +88,7 @@ public class SpamlolService extends Service {
 		}
 		toast.show();
 		AlarmManager mgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-		Intent i = new Intent(context, SpamlolService.class);
+		Intent i = new Intent(context, SpamfuService.class);
 		i.putExtra("action", KEEPALIVE);
 		PendingIntent pi = PendingIntent.getService(context, 0, i, 0);
 		long t = SystemClock.elapsedRealtime() + 1000; // one second interval

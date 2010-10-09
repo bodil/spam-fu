@@ -1,4 +1,3 @@
 *~
-bin
-gen
-default.properties
+bin/*
+gen/tv/bodil/spamfu/R.java
