@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spam-FU</string>
+    <string name="refresh">Hent svarteliste fra telefonterror.no</string>
+    <string name="refresh_title">Henter svarteliste...</string>
+    <string name="refresh_io_error">Greide ikke å hente svartelisten fra serveren. Prøv igjen senere.</string>
+    <string name="status_text">Svartelisten har %d nummer.</string>
+    <string name="status_text_empty">Trykk på hent-knappen for å hente svartelisten!</string>
+    <string name="spam_warning">Spam-advarsel:\n%s</string>
+</resources>
