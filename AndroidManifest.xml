@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
         
-    <service android:name="tv.bodil.spamfu.spamfuService"></service>
+    <service android:name="tv.bodil.spamfu.SpamfuService"></service>
 
     <receiver android:name="tv.bodil.spamfu.CallReceiver">
         <intent-filter>
