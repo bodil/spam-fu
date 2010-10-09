@@ -1,4 +1,4 @@
-package tv.bodil.spamlol;
+package tv.bodil.spamfu;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,13 +9,13 @@ public class CallReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Intent service = new Intent(context, SpamlolService.class);
+		Intent service = new Intent(context, SpamfuService.class);
 		if (intent.getStringExtra("state").equals(android.telephony.TelephonyManager.EXTRA_STATE_RINGING)) {
-			Log.d("Spamlol", "Call received: " + intent.getStringExtra("incoming_number"));
-			service.putExtra("action", SpamlolService.VERIFY_CALL);
+			Log.d("Spam-FU", "Call received: " + intent.getStringExtra("incoming_number"));
+			service.putExtra("action", SpamfuService.VERIFY_CALL);
 			service.putExtra("incoming_number", intent.getStringExtra("incoming_number"));
 		} else {
-			service.putExtra("action", SpamlolService.END_CALL);
+			service.putExtra("action", SpamfuService.END_CALL);
 		}
 		context.startService(service);
 	}

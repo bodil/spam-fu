@@ -1,4 +1,4 @@
-package tv.bodil.spamlol;
+package tv.bodil.spamfu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SpamlolActivity extends Activity implements Runnable {
+public class SpamfuActivity extends Activity implements Runnable {
 
 	private static final String BLACKLIST_URL = "http://www.telefonterror.no/uke_alle/terrorliste_navn_nr.txt";
 	
@@ -88,7 +88,7 @@ public class SpamlolActivity extends Activity implements Runnable {
 			}
 			db.setTransactionSuccessful();
 		} catch (IOException e) {
-			Log.e("Spamlol", "IO exception when loading blacklist.", e);
+			Log.e("Spam-FU", "IO exception when loading blacklist.", e);
 			handler.sendEmptyMessage(3);
 		} finally {
 			db.endTransaction();

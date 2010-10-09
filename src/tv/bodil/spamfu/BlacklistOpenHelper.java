@@ -1,4 +1,4 @@
-package tv.bodil.spamlol;
+package tv.bodil.spamfu;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,7 +10,7 @@ public class BlacklistOpenHelper extends SQLiteOpenHelper {
 	public static final String KEY_NUMBER = "num";
 	public static final String KEY_COMPANY = "company";
 
-	private static final String DATABASE_NAME = "tv.bodil.spamlol.sqlite";
+	private static final String DATABASE_NAME = "tv.bodil.spamfu.sqlite";
 	private static final int DATABASE_VERSION = 1;
     private static final String BLACKLIST_TABLE_CREATE =
                 "CREATE TABLE " + BLACKLIST_TABLE_NAME + " (" +
