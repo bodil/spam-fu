@@ -1,4 +1,4 @@
-package tv.bodil.spamfu;
+package com.spam_fu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import android.widget.Toast;
 
 public class SpamfuActivity extends Activity implements Runnable {
 
-	private static final String BLACKLIST_URL = "http://www.telefonterror.no/uke_alle/terrorliste_navn_nr.txt";
+	private static final String BLACKLIST_URL = "http://www.telefonterror.no/uke_alle2/nummerliste.txt";
 	
 	private static Pattern blacklistRe = Pattern.compile("^([0-9]+),(.*)$");
 	

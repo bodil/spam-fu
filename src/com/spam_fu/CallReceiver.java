@@ -1,4 +1,4 @@
-package tv.bodil.spamfu;
+package com.spam_fu;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package tv.bodil.spamfu;
+package com.spam_fu;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
